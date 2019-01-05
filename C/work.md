@@ -17,11 +17,32 @@
     1428行中，　函数要在.h中声明
 
 * HDMI_process.c  
-    142行中的判断条件　　
-
-
+    142行中的判断条件
     149行: 　拷贝数据量不再是width*height  - >    pHandle->nMemLen
-    214行：　分配内存空间
+    214行：　分配内存空间  
+
+
+
+*  unsigned shot 大端，小端存储问题　　
+*  存入的补码问题
+* HDMI_process.c  
+    144行中　HDMI_FAST_MEM宏　定义在CMakeLists中，编译的区别
+
+*  lseek(int filde, off_t offset, int whence) 
+　　修改文件的起始读写位置 
+    offset: 偏移量;
+    whence: SEEK_SET 将读写位置指向文件头后再增加offset个位移量　　
+
+*  mmap(void* start, size_t length, int prot, int flags, in fd, off_t offset)
+   返回：　成功时，返回被映射区域的指针．
+   start：　映射区开始地址，　０系统决定．
+   length: 
+   prot: 内存保护标志　
+   flags:
+   fd: 文件描述符
+   offset:　被映射对象内容的起点
+
+
 
 
 * 因为C语言并没有规定int占多少字节，为了让代码在多个平台上运行，使用＿u32告诉别人，这个变量占４个字节．　　
