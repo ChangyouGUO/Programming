@@ -14,6 +14,7 @@
    121 DrawFCWObject()  　　　　 画目标框，　usigned short类型，　坐标，　绘制状态．　需要知道，这些框的优先级别．　　
 　　
     33/34行中，memset(pImageData, 0, (nWidth >> MO_MASK_PIXEL_SHIFT)*nHeight*sizeof(char))  这里的偏移如何处理？？？
+    1428行中，　函数要在.h中声明
 
 * HDMI_process.c  
     142行中的判断条件　　
