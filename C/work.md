@@ -23,10 +23,10 @@
 
 
 
-*  unsigned shot 大端，小端存储问题　　
-*  存入的补码问题
+*  unsigned shot 大端，小端存储问题, 计算机是小端， 相加也是硬件　　
+*  存入的补码问题：存到电脑中就是补码，负数第一位不变，后面按位取反，然后最后一位加1。
 * HDMI_process.c  
-    144行中　HDMI_FAST_MEM宏　定义在CMakeLists中，编译的区别
+    144行中　HDMI_FAST_MEM宏　定义在CMakeLists中，编译的区别，fast memory的方式其实在内核中进行了mmap, 更快。
 
 *  lseek(int filde, off_t offset, int whence) 
 　　修改文件的起始读写位置 
