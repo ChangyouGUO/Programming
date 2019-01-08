@@ -23,4 +23,12 @@ puts() 函数属于stdio.h系列的输入/输出函数。与printf()不同, pust
 * 字符串输入前第一件事是 分配空间。char name[81]
 * 读取： scanf("%s", name);  printf("%s", name)   只能读取一个单词。
 * gets() 读取整行输入，遇到换行符，弃掉换行符，保存其余字符并添加空字符。puts()显示字符串在结尾添加换行符。
-*      758
+
+*      758  
+* gets()的严重缺点是： 只要一个字符数组指针，并不知道输入的长度，这就导致容易缓冲区溢出。 buffer overflow 出现 segmentation fault 说明程序试图访问未分配的内存。
+* gets()已经被C11标准抛弃。
+
+* fgets() / gets_s() 后者是stdio.h的可选扩展，C11的编译器不一定支持。
+
+* fgets()/fputs()  专门用于处理文件输入  
+P763
