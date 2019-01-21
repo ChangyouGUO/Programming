@@ -51,3 +51,27 @@
 * 139行得到pHDMI->pMaskData的数值． 149行将pMaskData中的值拷贝到对应的槽里．　　
 * pMaskData中的值由　99行中函数moDrawResultMask()来获取．  
 
+
+* linux下 df命令，看盘容量
+* sudo fdisk -l 查看分区信息  
+
+----  
+两块地址： 0x1E000000; 0x1E800000;
+寄存器地址： 0x43c90000  
+视察切换： 0x43c90004  
+
+
+* putVersionInfo() 在每一帧都要打印版本信息，新协议中没有多余的地址。 注释了。  
+
+
+* ttc预警， 橘黄色  
+//calib 模式下的字符位置
+* moDrawCalib()         将三行字符的位置，放在120行内。
+* moDrawStatusInfo()  
+    moDrawInstallInfo()    调整位置
+
+### 相机升级  
+----  
+清除rootfs中的文件， 生成新的版本，打包后放在pkg文件夹中。  
+进入ADASPlatform/Updater终端下
+- ./sh/run_generate.sh pkg detail  
