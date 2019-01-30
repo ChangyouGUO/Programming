@@ -75,3 +75,11 @@
 清除rootfs中的文件， 生成新的版本，打包后放在pkg文件夹中。  
 进入ADASPlatform/Updater终端下
 - ./sh/run_generate.sh pkg detail  
+
+
+###  git flow 使用 
+* git flow feature publish name    
+push分支  
+
+* git flow feature pull/track origin name  
+获取新分支
