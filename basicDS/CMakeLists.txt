@@ -32,6 +32,8 @@ add_executable(SelectionSort Code_02_SelectionSort.cpp)
 add_executable(HeapSort Code_03_HeapSort.cpp)
 add_executable(QuickSort Code_04_QuickSort.cpp)
 add_executable(MergeSort Code_05_MergeSort.cpp)
+add_executable(BucketSort Code_06_BucketSort.cpp)
+add_executable(RadixSort Code_07_RadixSort.cpp)
 
 target_link_libraries(BubbleSort ${OpenCV_LIBS}
 )
