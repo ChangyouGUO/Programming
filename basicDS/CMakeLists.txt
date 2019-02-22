@@ -36,6 +36,8 @@ add_executable(BucketSort Code_06_BucketSort.cpp)
 add_executable(RadixSort Code_07_RadixSort.cpp)
 add_executable(NetherlandsFlag Code_08_NetherlandsFlag.cpp)
 add_executable(MaxGap Code_11_MaxGap.cpp)
+add_executable(SmallSum Code_12_SmallSum.cpp)
+add_executable(KMP Code_KMP.cpp)
 
 target_link_libraries(BubbleSort ${OpenCV_LIBS}
 )
