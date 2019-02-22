@@ -83,3 +83,22 @@ push分支
 
 * git flow feature pull/track origin name  
 获取新分支
+
+
+###  log  
+在 main 函数中添加头文件和函数。  
+使用log_info() 方法如同printf()  
+运行： ./ADAS_HDMI -T -g0     # g后面的参数是LOG等级
+
+###  Linux指令  
+* sync 
+* 强制将缓存中的内容拷贝到磁盘中，确保文件成功保存在SD卡/硬盘中。  
+* 关闭前运行两次 sync; 相机用reboot关闭，然后断电  
+* 拷贝的程序可以简单运行一下，确认保存的版本正确： ./ADAS_HDMI -v
+
+###  库文件  
+.so -> .so.2 
+.so.2 -> .so.2.3
+* .so       编译时使用  
+  .so.2     桌面图标，程序调用这个名称
+  .so.2.3   真正的库，真正调用这个。 做demo时，将.so.2.3拷贝为.so.2以使用。
