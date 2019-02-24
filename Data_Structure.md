@@ -34,3 +34,52 @@
 1. 小和问题思想在于归并排序中，两个数组合并时，出现小于则小于那个数组的后面所有的数。  
 
 #### KMP算法  
+字符串source, 匹配字符串match, 求解match出现在字符串source中的第一个位置下标。  
+1. KMP算法实现了O(source.length)的时间复杂度。  
+2. 重点在构造辅助数组help[]上，不包含当前位置及后续的前段字符串， 字符串前缀和后缀的公共最大长度  
+3. 其意义在于当souce[posi] != match[cn]时，可以通过cn = help[cn], 继续比较source[posi] 与 match[cn]，直到比较cn = 0后。  
+
+#### Array to Stack Queue   
+用数组结构实现大小固定的队列和栈
+1. 栈一个index, 注意index是指向下一个该填写的位置  
+2. 队列需要first, last, 还有数组当前存储数量的变量(signal), last： push的位置；first: pop的位置； 两者都递增  
+
+#### GetMinStack  
+实现一个特殊的栈，在实现栈的基础功能的基础上，再实现返回栈中最小元素的操作  
+[要求]  
+1. pop, push, getMin操作的时间复杂度都是O(1)  
+2. 设计的栈类型可以使用现成的栈结构  
+
+#### Code_StackAndQueueConvert  
+如何仅用队列实现栈结构  
+如何仅用栈实现队列结构  
+
+#### DogCatQueue  
+猫狗队列，宠物，狗，猫的类如下：
+> - public class Pet { 
+>        private String type;  
+>        public Pet(String type) {  
+>             this.type = type;  
+>        }  
+>        public String getPetType() {  
+>              return this.type;
+>        }
+>   }  
+> - public class Dog extends Pet {  
+          public Dog() {
+              super("dog");
+          }
+    }
+> - public class Cat extends Pet {  
+          public Cat() {  
+              super("cat");
+          }
+    }  
+[要求]：  
+1. add 方法将cat类或dog类的实例放入队列中；  
+2. 调用pollAll方法，将队列中所有的实例按照进队列的先后顺序依次弹出；  
+3. 调用pollDog方法，将队列中dog类的实例按照进队列的先后顺序依次弹出；  
+4. 调用pollCat方法，将队列中cat类的实例按照进队列的先后顺序依次弹出；  
+5. 调用isEmpty方法，检查队列中是否还有dog或cat的实例；  
+6. 用户可以调用isDogEmpty方法， 检查队列中是否有dog类的实例；  
+7. 用户可以调用isCatEmpty方法， 检查队列中是否有cat类的实例；

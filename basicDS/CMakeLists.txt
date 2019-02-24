@@ -39,6 +39,10 @@ add_executable(MaxGap Code_11_MaxGap.cpp)
 add_executable(SmallSum Code_12_SmallSum.cpp)
 add_executable(KMP Code_KMP.cpp)
 # add_executable(KMPShortestHaveTwice Code_KMP_ShortestHaveTwice.cpp)
+add_executable(ArrayToStackQueue Code_Array_To_Stack_Queue.cpp)
+add_executable(GetMinStack Code_GetMinStack.cpp)
+add_executable(StackAndQueueConvert Code_StackAndQueueConvert.cpp)
+add_executable(DogCatQueue Code_DogCatQueue.cpp)
 
 target_link_libraries(BubbleSort ${OpenCV_LIBS}
 )
