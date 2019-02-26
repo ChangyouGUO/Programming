@@ -132,7 +132,6 @@ public:
 };
 
 int main(int argc, char** argv) {
-    char text[20];
     DogCatQueue test;
 
     dog dog1;
@@ -150,12 +149,11 @@ int main(int argc, char** argv) {
     test.add(cat3);
 
     while(!test.isDogQueueEmpty()) {
-        sprintf(text, test.popDog().getPetType());
-        printf(text);
+        cout << test.popDog().getPetType() << endl;
     }
 
     while(!test.isEmpty()) {
-        printf(test.popAll().getPetType());
+        cout << test.popAll().getPetType() << endl;
     }
 
     return 0;
