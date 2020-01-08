@@ -1,3 +1,5 @@
+// 建议使用snprintf进行字符串的拼接操作
+
 #include <stdio.h>
 
 int main(int argc, char **argv) {
