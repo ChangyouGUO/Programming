@@ -1,11 +1,11 @@
-// 遍历文件夹
+//　 遍历文件夹
 
 #include <dirent.h>
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
 
-    using namespace std;
+using namespace std;
 
 int main(int argc, char **argv) {
   struct dirent **namelist;
@@ -29,8 +29,8 @@ int main(int argc, char **argv) {
                    namelist[i]->d_name);
         }
 
-        printf("%s", filePath);
-        remove(filePath);
+        printf("%s\n", filePath);
+        // remove(filePath);
       }
       free(namelist[i]);
     }
