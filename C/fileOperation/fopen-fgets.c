@@ -9,7 +9,7 @@
 #include <string.h>
 
 #define fileName                                                               \
-  ("/home/guo/moDisk/gCode/Programming/C/fileOperation/build/test.csv")
+  ("/tmp/MOLog/CalibRoadSurface/VanishPoint_00_2020-00-13-15:43:23.csv")
 
 int main(int argc, char **argv) {
   char cFile[256] = fileName;
