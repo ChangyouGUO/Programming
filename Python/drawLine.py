@@ -1,12 +1,18 @@
 import numpy as np
+import matplotlib
 import matplotlib.pyplot as plt
 from scipy import optimize
 
+# 显示默认的字体库
+# print(matplotlib.matplotlib_fname())
+
+#显示中文标签
+plt.rcParams['font.sans-serif']=['SimHei'] 
 
 nSafePassHeight = 4.0
 
 def offset(distance, offset_b =0, offset_k = 0.003):
-    return offset_b + offset_k * distance;
+    return offset_b + offset_k * distance
 
 
 def main():
@@ -14,8 +20,8 @@ def main():
     yObjectThresh = offset(xObjectThresh) + nSafePassHeight
     yObjectSafePass = np.ones(90) *nSafePassHeight
     
-    plt.plot(xObjectThresh, yObjectThresh, label='HeightThresh')
-    lineSafe, = plt.plot(xObjectThresh, yObjectSafePass, linestyle='-', label='VehicleSafePassHeight')
+    plt.plot(xObjectThresh, yObjectThresh, label='目标高度报警阈值')
+    lineSafe, = plt.plot(xObjectThresh, yObjectSafePass, linestyle='-', label='车辆最低可安全通过高度')
     lineSafe.set_dashes([3, 3])
 
     # draw points
@@ -29,7 +35,7 @@ def main():
     plt.plot(xPoints[2:11], yFitValue[2:11], "r")
     plt.plot(xPoints[10:], yFitValue[10:], "b")
    
-    plt.scatter(xPoints, yPoints, marker="o", color=["b", "b", "r", "r", "r", "r", "r", "r", "r", "r", "b", "b", "b", "b", "b", "b", "b"], label="ObjectHeight\n blue: warning off\n red:  warning on")
+    plt.scatter(xPoints, yPoints, marker="o", color=["b", "b", "r", "r", "r", "r", "r", "r", "r", "r", "b", "b", "b", "b", "b", "b", "b"], label="目标高度\n蓝色: 不报警\n红色: 报警")
 
     plt.annotate("1", xy=(85, 4.15), xytext=(84, 4.3), color="b")
     plt.annotate("2", xy=(82, 4.1),  xytext=(81, 4.2), color="b")
@@ -42,8 +48,8 @@ def main():
 
 
     plt.axis([0, 90, 0, 7])
-    plt.xlabel('Distance(m)')
-    plt.ylabel('Height(m)')
+    plt.xlabel('距离(m)')
+    plt.ylabel('高度(m)')
     
     plt.legend()
     plt.show()
