@@ -13,6 +13,7 @@ You know the string s . Find the substring t or determine that such substring do
 */
 
 #include "stdio.h"
+#include "stdlib.h"
 #include "string.h"
 #define LEN (1000000)
 
@@ -33,7 +34,6 @@ int main()
     //next 数组
     while (index <= len)
     {
-        printf("here");
         if (input[preIndex] == input[index - 1])
         {
             strfix[index] = preIndex + 1;
@@ -53,7 +53,12 @@ int main()
             preIndex = strfix[preIndex];
         }
     }
-    printf("here!!");
+
+    if (maxlen == 0)
+    {
+        printf("Just a legend");
+        return 0;
+    }
 
     // 0-n-1中最长的部分,大于结尾的长度，此时结果为结尾这段长度。
     if (maxlen >= strfix[len])
@@ -66,7 +71,7 @@ int main()
         int n = strfix[len];
         while (n != 0 && n > maxlen)
         {
-            n = strfix[len];
+            n = strfix[n];
         }
         maxlen = n;
     }
