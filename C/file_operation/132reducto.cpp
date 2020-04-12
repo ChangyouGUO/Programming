@@ -2,13 +2,13 @@
 读写文件，只保留第一个文件三个字节中的一个
 */
 #include <stdio.h>
-#include <stdlib.h> //exit()
-#include <string.h> //strcpy(), strcat()原型
+#include <stdlib.h>  //exit()
+#include <string.h>  //strcpy(), strcat()原型
 #define LEN 40
 int main(int argc, char **argv) {
   FILE *in, *out;
   int ch;
-  char name[LEN]; //存储文件名
+  char name[LEN];  //存储文件名
   int count = 0;
 
   if (argc < 2) {
