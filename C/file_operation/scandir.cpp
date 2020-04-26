@@ -1,9 +1,9 @@
 //　 遍历文件夹
 
 #include <dirent.h>
-#include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
+#include <iostream>
 
 using namespace std;
 
@@ -11,7 +11,8 @@ int main(int argc, char **argv) {
   struct dirent **namelist;
   int n;
   int i;
-  string path = "/home/guo/Desktop/test/";
+  //   string path = "/home/guo/Desktop/test/";
+  string path = "/home/guo/moSource/mpkg/tmp/rootfs/home/root/Controls";
   n = scandir(path.c_str(), &namelist, 0, alphasort);
   if (n < 0) {
     perror("scandir");
