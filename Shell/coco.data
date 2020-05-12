@@ -1,0 +1,4 @@
+classes = 80
+
+valid = /home/guo/moDisk/gCode/Programming/Shell/example_yolov3/5_file_for_test/image.txt
+names = /home/guo/moDisk/gCode/Programming/Shell/example_yolov3/5_file_for_test/coco.names
