@@ -50,6 +50,10 @@ int main() {
   int x;
   cout << "Input a num(0x)" << endl;
   cin >> hex >> x;
+  // check if an error occurred
+  if (cin.fail()) {
+      // error process
+  }
   cout << "input: "
        << "(hex)" << x << "(dec)" << dec << x << endl;
 
